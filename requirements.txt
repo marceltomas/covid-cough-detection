@@ -1,0 +1,9 @@
+scipy
+dtaidistance
+scikit-learn
+pandas
+numpy
+torch
+matplotlib
+seaborn
+librosa
