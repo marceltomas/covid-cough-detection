@@ -1,1 +1,1 @@
-# neural-language-processing
+# COVID-19 detection from coughs
