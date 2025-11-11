@@ -17,3 +17,5 @@ Use this [Hugging Face dataset](https://huggingface.co/datasets/marceltomas/covi
 - Training scripts for HuBERT, AST, and VGG models
 - Hyperparameter sweep utilities.
 - Final evaluation and documentation.
+
+This repository is built from this **[Kaggle competition](https://www.kaggle.com/competitions/covid4)** used in one of my university courses.
