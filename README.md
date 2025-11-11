@@ -18,4 +18,5 @@ Use this [Hugging Face dataset](https://huggingface.co/datasets/marceltomas/covi
 - Hyperparameter sweep utilities.
 - Final evaluation and documentation.
 
+All preprocessing, feature extraction, and DTW computations were implemented from scratch.
 This repository is built from this **[Kaggle competition](https://www.kaggle.com/competitions/covid4)** used in one of my university courses.
