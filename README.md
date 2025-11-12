@@ -19,3 +19,4 @@ Use this [**Hugging Face dataset**](https://huggingface.co/datasets/marceltomas/
 - Final evaluation and documentation.
 
 This repository is built from this **[Kaggle competition](https://www.kaggle.com/competitions/covid4)** used in one of my university courses.
+
