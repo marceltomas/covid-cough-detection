@@ -4,7 +4,7 @@
 The current codebase includes fully implemented and well-documented pipelines for audio preprocessing, feature extraction (MFCC, MFSC, Mel spectrograms), dataset preparation, and optimized DTW-based similarity computation.  
 The training scripts for HuBERT/AST/VGG models will be added once the code is polished.
 
-Use this [Hugging Face dataset](https://huggingface.co/datasets/marceltomas/covid-cough-detection) to reproduce the experiments.
+Use this [**Hugging Face dataset**](https://huggingface.co/datasets/marceltomas/covid-cough-detection) to reproduce the experiments, which is a balanced selection of recordings from 3 different databases: [**Coswara**](https://arxiv.org/abs/2005.10548), [**Cambridge**](https://www.covid-19-sounds.org/es/blog/voice_covid_icassp.html), and [**Coughvid**](https://zenodo.org/records/4048312).
 
 ## ✅ Implemented
 - Modular audio preprocessing pipeline.
