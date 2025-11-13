@@ -24,6 +24,8 @@ FEATURE_PARAM_FILTERS = {
     "raw_waveform": lambda p: {}, 
 }
 
+DEFAULTS = {"n_mfcc": 13, "n_mels": 80}
+
 def parse_kaldi_metadata(kaldi_dir: str, class_to_id: dict, wav_dir: str = WAV_SUBDIR) -> list:
     """
     Parse Kaldi-style data directory to extract file paths and labels.
@@ -218,10 +220,19 @@ def add_features_to_splits(
 
     feature_fn = FEATURE_FUNCTIONS[feature_type]
     feature_params = FEATURE_PARAM_FILTERS[feature_type](params.copy())  # Allows us to reuse mfcc_params dictionary
+    
+    if feature_type == "mfcc":                                           # Full directory for the features
+        n_mfcc = params.get("n_mfcc", DEFAULTS["n_mfcc"])
+        feat_suffix = feature_type if n_mfcc == DEFAULTS["n_mfcc"] else f"{feature_type}.{n_mfcc}"
+    elif feature_type in {"mfsc", "mel_spectrogram"}:
+        n_mels = params.get("n_mels", DEFAULTS["n_mels"])
+        feat_suffix = feature_type if n_mels == DEFAULTS["n_mels"] else f"{feature_type}.{n_mels}"
+    else:
+        feat_suffix = feature_type
 
     wav_dir = os.path.join(ROOT_DIR, WAV_SUBDIR)
-    train_save = os.path.join(ROOT_DIR, feats_dir, "train", feature_type)
-    test_save = os.path.join(ROOT_DIR, feats_dir, "test", feature_type)
+    train_save = os.path.join(ROOT_DIR, feats_dir, "train", feat_suffix)
+    test_save = os.path.join(ROOT_DIR, feats_dir, "test", feat_suffix)
     cache_enabled = feature_type != "raw_waveform"
     
     train_out = add_features_to_df(
