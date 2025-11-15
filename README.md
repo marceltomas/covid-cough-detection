@@ -12,11 +12,12 @@ Use this [**Hugging Face dataset**](https://huggingface.co/datasets/marceltomas/
 - Efficient PyTorch + NumPy implementation of feature pipelines.
 - Custom Hugging Face dataset.
 - DTW-based similarity engine (KNN + optimized vectorized DTW).
+- Preprocessing and feature extraction notebook.
 
 ## 🚧 In Progress
-- Training scripts for HuBERT, AST, and VGG models
-- Hyperparameter sweep utilities.
-- Final evaluation and documentation.
+- Training pipeline.
+- HuBERT, AST, and VGG models.
+- Model evaluation notebook.
 
 This repository is built from this **[Kaggle competition](https://www.kaggle.com/competitions/covid4)** used in one of my university courses.
 
