@@ -3,7 +3,7 @@ import re
 import numpy as np
 import pandas as pd
 import librosa
-from typing import Optional, Callable, Dict
+from typing import Optional, Callable, Dict, Tuple
 from utils import knn_predict, DTWLookup, dtw_distance
 from config import SEED, WAV_SUBDIR, ROOT_DIR
 from feature_extraction import get_mfcc, get_mfsc, get_mel_spectrogram, get_raw_waveform
@@ -373,6 +373,18 @@ def clean_audio_type(
 
     lookup.save()
     return train_clean, test_clean
+
+def partition_by_source(train_df: pd.DataFrame, test_df: pd.DataFrame, source: int) -> Tuple[pd.DataFrame, pd.DataFrame]:
+    """Partition the dataset into train and test based on a specific source."""
+    full_df = pd.concat([train_df, test_df], ignore_index=True)
+    if source == 1 or source == 2: # sources 1 and 2 are the same source
+        test_partition = full_df[full_df['source_id'].isin([1, 2])]
+        train_partition = full_df[~full_df['source_id'].isin([1, 2])]
+    else:
+        test_partition = full_df[full_df['source_id'] == source]
+        train_partition = full_df[full_df['source_id'] != source]
+        
+    return train_partition, test_partition
 
 def process_data(
     params: Dict,
