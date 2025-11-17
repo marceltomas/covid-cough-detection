@@ -1,6 +1,8 @@
 import time
+import random
 import os
 import pickle
+import torch
 import numpy as np
 import pandas as pd
 from dtaidistance import dtw
@@ -8,6 +10,14 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import KFold
 from config import SEED
 from typing import Callable, Optional
+
+def set_seeds(seed=304):
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+    torch.backends.cudnn.deterministic = True
 
 class DTWLookup:
     """
