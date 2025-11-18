@@ -9,15 +9,15 @@ The project uses the following [**Hugging Face dataset**](https://huggingface.co
 ```
 .
 ├── notebooks/
-│   ├── 01_eda.ipynb              # Exploratory analysis + feature extraction
-│   └── 02_model_analysis.ipynb   # VGG experiments and evaluation
+│   ├── 01_eda.ipynb              # Exploratory analysis + feature extraction.
+│   └── 02_model_analysis.ipynb   # VGG experiments and evaluation.
 │
-├── config.py                     # Constants and hyperparameters
+├── config.py                     # Constants and hyperparameters.
 ├── data_preprocessing.py         # Preprocessing the Kaldi-style dataset.
-├── feature_extraction.py         # MFCC, MFSC, MelSpectrogram implementations
-├── models.py                     # VGG, HuBERT, AST architecture code
-├── training.py                   # Training loop, evaluation
-├── utils.py                      # Misc utilities (DTW, kNN...)
+├── feature_extraction.py         # MFCC, MFSC, MelSpectrogram implementations.
+├── models.py                     # VGG, HuBERT, AST architecture code.
+├── training.py                   # Training loop, evaluation.
+├── utils.py                      # Misc utilities (DTW, kNN...).
 ├── requirements.txt
 └── README.md
 ```
