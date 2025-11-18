@@ -25,15 +25,15 @@ The project uses the following [**Hugging Face dataset**](https://huggingface.co
 
 ### **Processing**
 
-* Unified preprocessing
-* Predict missing audio types using DTW-based kNN
-* MFCC, MFSC, and Mel Spectrogram extraction (NumPy + PyTorch)
+* Unified preprocessing.
+* Predict missing audio types using DTW-based kNN.
+* MFCC, MFSC, and Mel Spectrogram extraction (NumPy + PyTorch).
 
 ### **HuggingFace Dataset**
 
-* Kaldi-style directory 
+* Kaldi-style directory layout. 
 * Standard train/test splits with .wav files.
-* Precomputed DTW distance lookup
+* Precomputed DTW distance lookup.
 * Precomputed MFSC, MFCC and Mel Spectrograms for each audio file.
 
 ### **Models**
@@ -41,20 +41,20 @@ The project uses the following [**Hugging Face dataset**](https://huggingface.co
 * **VGG** for audio classification.
 * **HuBERT** training pipeline.
 * **AST (Audio Spectrogram Transformer)** training pipeline.
-* Flexible feature backends (MFCC, MFSC, MelSpec, raw waveform)
+* Flexible feature backends (MFCC, MFSC, MelSpec, raw waveform).
 
 ### **Training & Evaluation**
 
-* Early stopping + learning-rate scheduling
-* Metrics: AUC, accuracy, precision, recall
+* Early stopping + learning-rate scheduling.
+* Metrics: AUC, accuracy, precision, recall.
 * Cross-domain evaluation analysis.
 
 ## 📝 Notebooks
 
 Two notebooks provide a deep walkthrough:
 
-* **01_eda.ipynb** — EDA, preprocessing, MFCC/MFSC/Mel explanations
-* **02_model_analysis.ipynb** — VGG, HuBERT, and AST experiments, evaluation metrics
+* **01_eda.ipynb** — EDA, preprocessing, MFCC/MFSC/Mel explanations.
+* **02_model_analysis.ipynb** — VGG, HuBERT, and AST experiments, evaluation metrics.
 
 These demonstrate the full ML workflow used during development.
 
@@ -62,10 +62,10 @@ These demonstrate the full ML workflow used during development.
 
 The objective is to provide a **modular, reproducible baseline** for audio-based diagnosis systems, enabling:
 
-* Research on respiratory sound modeling
-* Benchmarking CNN and Transformer architectures
-* Exploration of audio feature pipelines
-* Understanding cough/breath signal characteristics
+* Research on respiratory sound modeling.
+* Benchmarking CNN and Transformer architectures.
+* Exploration of audio feature pipelines.
+* Testing cross-domain generalization.
 
 This repository is built from this **[Kaggle competition](https://www.kaggle.com/competitions/covid4)** used in one of my university courses.
 
