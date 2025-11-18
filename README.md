@@ -62,7 +62,6 @@ These demonstrate the full ML workflow used during development.
 
 The objective is to provide a **modular, reproducible baseline** for audio-based diagnosis systems, enabling:
 
-* Research on respiratory sound modeling.
 * Benchmarking CNN and Transformer architectures.
 * Exploration of audio feature pipelines.
 * Testing cross-domain generalization.
