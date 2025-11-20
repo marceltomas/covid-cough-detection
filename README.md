@@ -21,7 +21,6 @@ The project uses the following [**Hugging Face dataset**](https://huggingface.co
 ├── requirements.txt
 └── README.md
 ```
----
 
 ### **Processing**
 
@@ -57,8 +56,6 @@ Two notebooks provide a deep walkthrough:
 * **02_model_analysis.ipynb** — VGG, HuBERT, and AST experiments, evaluation metrics.
 
 These demonstrate the full ML workflow used during development.
-
----
 
 The objective is to provide a **modular, reproducible baseline** for audio-based diagnosis systems, enabling:
 
